@@ -14,7 +14,7 @@
   --color-activ-btn: #188ce8;
   --color-header-border: #ececec;
   --color-border-box: #eeeeee;
-  --color-icon: #AFB1B8;
+  --color-icon: #afb1b8;
 }
 
 /* спадкодавець */
@@ -50,7 +50,6 @@ body {
   margin-right: auto;
   padding: 0 15px;
 }
-
 
 /* heder */
 .top-line {
@@ -93,7 +92,6 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-
   color: var(--color-secondary);
   font-weight: 500;
   font-size: 14px;
@@ -114,19 +112,20 @@ body {
   display: flex;
   margin-left: auto;
 }
+
 .contact .item + .item {
   margin-left: 50px;
 }
-
+/* Мейл. тел. */
 .contact .connect {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
-
+  gap: 10px;
   color: var(--color-primary);
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: calc(16.41 / 14);
 }
 
 .contact .connect:hover,
@@ -134,6 +133,11 @@ body {
   color: var(--color-accent);
 }
 
+/* іконки мейл. тел. */
+.connect .icon {
+  align-self: center;
+  fill: currentColor;
+}
 
 /* hero */
 .hero {
@@ -219,7 +223,7 @@ body {
 
 .list-merit {
   width: 270px;
-margin-left: 30px;
+  margin-left: 30px;
 }
 
 .list-merit:first-child {
@@ -235,7 +239,6 @@ margin-left: 30px;
   border-radius: 4px;
   margin-bottom: 30px;
 }
-
 
 .section-subtitle {
   margin-top: 0px;
@@ -275,13 +278,16 @@ margin-left: 30px;
 .work-foto:first-child {
   margin-left: 0;
 }
+
 /* наша команда */
 .section-team {
   background-color: var(--color-background-light);
 }
+
 .team {
   display: flex;
 }
+
 .team-list {
   margin-left: 30px;
   background-color: var(--color-white);
@@ -289,17 +295,52 @@ margin-left: 30px;
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .team-list:first-child {
   margin-left: 0;
 }
 
 .desc-text {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   text-align: center;
 
   font-size: 16px;
   line-height: 1.2;
+}
+
+/* блок посилань на соцмережи */
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* посилання на соцмережи */
+.item .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  color: var(--color-icon);
+}
+
+.social-link .icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.item .social-link:hover,
+.item .social-link:focus {
+  background-color: var(--color-accent);
+  color: var(--color-white);
 }
 
 /* Постійні кліенти */
@@ -318,9 +359,9 @@ margin-left: 30px;
 .clients-link {
   display: flex;
   align-items: center;
-    justify-content: center;
+  justify-content: center;
   width: 170px;
-    height: 92px;
+  height: 92px;
 }
 
 .clients-link .thumb-icon {
@@ -329,12 +370,12 @@ margin-left: 30px;
   fill: var(--color-icon);
   padding: 0 32px;
   border: 1px solid var(--color-icon);
-    border-radius: 4px;
+  border-radius: 4px;
 }
 
 .clients-link .thumb-icon:hover {
   fill: var(--color-accent);
-border-color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 /* futer */
@@ -379,6 +420,21 @@ border-color: var(--color-accent);
 .contact-address:hover,
 .contact-address:focus {
   color: var(--color-accent);
+}
+
+/* запрошення у футорі */
+.page-footer .container {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
+}
+
+.welcome-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.welcome-link .icon {
+  fill: var(--color-white);
 }
 
 /* porfolio */
@@ -462,3 +518,6 @@ border-color: var(--color-accent);
   line-height: 1.9;
   letter-spacing: 0.03em;
 }
+
+
+/* чи буде кращим використати для фону у герої контейнер .container-fluid ? */
