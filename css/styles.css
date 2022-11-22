@@ -37,6 +37,16 @@ body {
 .connect {
   text-decoration: none;
 }
+/* кнопка загальні властивості */
+.button {
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
 
 /* Порядок оформлення стилів:
 1. Блочна модель (геометрія)
@@ -125,7 +135,7 @@ body {
   color: var(--color-primary);
   font-weight: 500;
   font-size: 14px;
-  line-height: calc(16.41 / 14);
+  line-height: calc(16 / 14);
 }
 
 .contact .connect:hover,
@@ -147,7 +157,6 @@ body {
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-
   background-color: var(--color-brand);
   background-image: linear-gradient(to right, var(--color-img-overlay), var(--color-img-overlay)),
     url(../images/studio/Img-team.jpeg);
@@ -172,23 +181,15 @@ body {
 }
 
 .button-hero {
-  display: inline-flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  align-items: center;
   padding: 10px 32px;
   min-width: 216px;
-
+  align-items: center;
+  text-align: center;
   color: var(--color-white);
   background-color: var(--color-accent);
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  line-height: calc(30 / 16);
 }
 /* активна кнопка в герої*/
 .button-hero:hover,
@@ -429,6 +430,15 @@ body {
   align-items: baseline;
 }
 
+.welcome-text {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: calc(16.41 / 14);
+  letter-spacing: 0.03em;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
 .welcome-link {
   background: rgba(255, 255, 255, 0.1);
 }
@@ -442,36 +452,29 @@ body {
 .btn-line {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
-}
-.list-btn {
-  margin-left: 8px;
-}
-.list-btn:first-child {
-  margin-left: 0;
+  margin-bottom: 50px;
+  gap: 8px;
 }
 
 .button-filter {
-  border-radius: 4px;
+  padding: 6px 22px;
   color: var(--color-secondary);
   background: var(--color-background-light);
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.3;
-  cursor: pointer;
+  line-height: calc(26 / 16);
+}
+
+.button-filter:hover,
+.button-filter:focus {
+  background-color: var(--color-accent);
+  color: var(--color-white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
-.button-filter:hover {
-  background-color: var(--color-accent);
-  color: var(--color-white);
-}
 .button-filter:active {
-  background-color: var(--color-accent);
-  color: var(--color-white);
+  background-color: var(--color-activ-btn);
 }
+
 /* список робіт */
 .portfolio {
   display: flex;
@@ -496,6 +499,12 @@ body {
   border-top: 0;
 }
 
+.portfolio-box:hover,
+.portfolio-box:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .post-text {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -518,6 +527,5 @@ body {
   line-height: 1.9;
   letter-spacing: 0.03em;
 }
-
 
 /* чи буде кращим використати для фону у герої контейнер .container-fluid ? */
